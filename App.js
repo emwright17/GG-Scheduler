@@ -44,12 +44,8 @@ export default class App extends Component {
           </View>
         </View>
       </View>
-      
-      
     );
-
   }
-  
 }
 
 const styles = StyleSheet.create({
@@ -64,14 +60,6 @@ const styles = StyleSheet.create({
     fontSize: 65,
     color: '#de2138',
      },
-  // button: {
-  //   color: '#de2138',
-  //   backgroundColor: '#bac3c3',
-  //   marginTop: 20,
-  //   borderRadius: 10,
-  //   borderWidth: 1,
-  //   borderColor: '#de2138',
-  // },
   img: {
     width: 500,
     height: 500,
