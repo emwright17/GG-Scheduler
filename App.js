@@ -1,14 +1,16 @@
 import React, { useState} from 'react';
 import { StyleSheet, Text, View, Image, requireNativeComponent, Alert } from 'react-native';
-import Header from './components/Header';
-import Button from './components/Button';
-import { useFonts } from "@use-expo/font";
+import {NavigationContainer} from '@react-navigation/native';
+import {createStackNavigator} from '@react-navigation/stack';
 import {AppLoading} from 'expo'
 import * as Font from 'expo-font'
 import { Component } from 'react';
+import Landing from './views/Landing';
+import Input from './views/Input';
+import { color } from 'react-native-reanimated';
 
 
-
+const Stack = createStackNavigator();
 
 export default class App extends Component {
   state = {
@@ -30,20 +32,29 @@ export default class App extends Component {
       return <AppLoading />
     }
     return (
-      <View style={styles.container}>
-        <Image source={require('./images/logo.png')} style={styles.img}/>
-        <View style={{paddingTop: 75}}>
-          <Text style={styles.text}>Schedule Creator</Text>
-          <View style={{paddingTop: 30}}>
-              <Button
-                title = "INPUT TEAM INFO"
-              />
-              <Button
-                title = 'IMPORT FROM EXISTING LEAGUE'
-              />
-          </View>
-        </View>
-      </View>
+      <NavigationContainer>
+        <Stack.Navigator>
+          <Stack.Screen name = "HOME" options={{headerShown: false}} component={Landing}/>
+          <Stack.Screen 
+            name = "Input"
+            component={Input}
+            options={{
+              title: "Gametime Greatness",
+              headerTitleStyle: {
+                fontFamily: "TampaBay",
+                color: "#ffffff",
+                alignSelf: "center",
+                justifyContent: "center",
+                fontSize: 50,
+              },
+              headerStyle: {
+                backgroundColor: "#07192f",
+              }
+            }}
+          />
+            
+        </Stack.Navigator>
+      </NavigationContainer>
     );
   }
 }

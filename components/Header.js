@@ -20,6 +20,7 @@ const styles = StyleSheet.create({
         alignSelf: 'flex-start'
     },
     text: {
+        fontFamily: 'TampaBay',
         color: 'white',
         fontSize: 50,
         textAlign: 'center',
