@@ -34,7 +34,7 @@ export default class App extends Component {
     return (
       <NavigationContainer>
         <Stack.Navigator>
-          <Stack.Screen name = "HOME" options={{headerShown: false}} component={Landing}/>
+          <Stack.Screen name = " " options={{headerShown: false}} component={Landing}/>
           <Stack.Screen 
             name = "Input"
             component={Input}

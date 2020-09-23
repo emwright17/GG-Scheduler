@@ -16,8 +16,8 @@ const styles = StyleSheet.create({
     paddingBottom:15,
     backgroundColor:'#ffffff',
     borderRadius:10,
-    borderWidth: 1,
-    borderColor: '#07192f'
+    borderWidth: 4,
+    borderColor: '#07192f',
   },
   text: {
     fontFamily: 'TampaBay',
@@ -25,7 +25,7 @@ const styles = StyleSheet.create({
     color: "#07192f",
     fontWeight: "bold",
     alignSelf: "center",
-    textTransform: "uppercase"
+    textTransform: "uppercase",
   }
 });
 
